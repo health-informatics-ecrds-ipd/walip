@@ -1,0 +1,27 @@
+{
+    "name": "assaneonline/teranga-mobile-php-client",
+    "description": "Teranga Mobile PHP Client Library",
+    "type": "library",
+    "keywords": ["ipd", "teranga", "php", "rest", "api", "client"],
+    "homepage": "https://github.com/assaneonline/teranga-mobile-php-client",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Assane Mbengue",
+            "email": "assane101@gmail.com",
+            "homepage": "https://github.com/assaneonline",
+            "role": "Developer"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "php": ">=5.3.0",
+        "ext-curl": "^7.3"
+    },
+    "autoload": {
+        "psr-0": {
+            "TerangaMobile": "src/",
+            "Core": "src/"
+        }
+    }
+}

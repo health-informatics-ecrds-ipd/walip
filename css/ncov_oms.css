@@ -1,0 +1,37 @@
+table{
+	width:100%;
+}
+
+table td{
+	width:50px;
+	padding:5px;
+	vertical-align: top;
+}
+
+.container{
+	left:10%;
+	width:80%;
+	margin:auto;
+}
+
+h3{
+	padding-left:1%;
+}
+
+h2,h1{
+	width: 90%;
+	text-align:center;
+}
+
+input, select{
+	height: 31px;
+	font-size: 15px;
+	width:55%;
+	margin-bottom:5px;
+	border-radius: 0px;
+}
+
+label{
+	font-size:18px;
+	width:90px;
+}

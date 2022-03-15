@@ -1,0 +1,303 @@
+/*
+input, select {
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+}
+*/
+
+body { 
+    
+    font-family: "Trebuchet MS","Lucida Grande","Lucida Sans Unicode","Lucida Sans","Tahoma,sans-serif";
+    font-weight:bold;
+}
+button{
+	font-family: "Trebuchet MS","Lucida Grande","Lucida Sans Unicode","Lucida Sans","Tahoma,sans-serif";
+	border-radius:0px;
+}
+#table_upload tr:hover {
+    background: lightgrey;
+}
+
+label{
+	font-size:14px;
+	font-weight:normal;
+}
+/*
+input {
+    border-radius: 5px;
+    border: solid 1px gray;
+    background: white
+    font-weight:bold;
+    font-size:13px;
+}
+
+select {
+    border: solid 1px gray;
+    border-radius: 0px;
+    width:100px;
+}
+*/
+#table_info_malade td:not(:first-child) {
+    padding-left: 30px;
+}
+
+#table_info_malade td {
+    padding-bottom: 6px;
+    text-align:left;
+}
+
+.inputs2 {
+    width: 172px;
+    border-radius: 13px;
+    
+}
+
+
+.inputs5 {
+    width: 95px;
+}
+
+.inputs6 {
+    width: 300px;
+    height: 20px;
+    border-radius: 20px;
+    margin-top:2px;
+    margin-bottom:2px;
+}
+
+.select6{
+	width: 302px;
+    height: 25px;
+    border-radius: 0px;
+}
+.textarea1 {
+	margin-top:2px;
+    margin-bottom:2px;
+    width: 295px;
+    font-size: 13px;
+    height: 200px;
+    border-radius: 5px;
+}
+
+
+.input_plaque {
+    border-radius: 360px;
+    height:50px;
+    width:50px;
+    text-align: center;
+    border-color: lightgrey;
+}
+
+#div_conteneur {
+	/*
+    width:70%;
+    margin: 20px;
+    padding:20px;
+    border: solid 1px gray;
+    border-radius: 100px;
+    box-shadow: 1px 1px 12px #555; 
+    */
+}
+
+#div_plaque_elisa, #div_upload {
+    width:1000px;
+    margin: 20px;
+    padding:20px;
+    border: solid 1px gray;
+    border-radius: 30px;
+    box-shadow: 1px 1px 5px #555;
+}
+
+#bas {
+    height : 25px;
+    background:rgba(0,0,0,0.8);
+    color:white;
+    margin-top:15px;
+    border-radius: 5px;
+    border-bottom-right-radius: 25px;
+    border-bottom-left-radius: 25px;
+    font-weight:bold;
+    padding-top:2px;
+    margin-bottom:10px;
+    width: 90%;
+    box-shadow: 0px 0px 6px black;
+    font-size:13px;
+}
+
+.myButton  {
+    -moz-box-shadow: 0px 10px 14px -7px #276873;
+    -webkit-box-shadow: 0px 10px 14px -7px #276873;
+    box-shadow: 0px 10px 14px -7px #276873;
+    background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, rgba(67,115, 213, .4)), color-stop(1, rgba(67,115, 213, .4)));
+    background:-moz-linear-gradient(top, rgba(67,115, 213, .4) 5%, rgba(67,115, 213, .4) 100%);
+    background:-webkit-linear-gradient(top, rgba(67,115, 213, .4) 5%, rgba(67,115, 213, .4) 100%);
+    background:-o-linear-gradient(top, rgba(67,115, 213, .4) 5%, rgba(67,115, 213, .4) 100%);
+    background:-ms-linear-gradient(top, rgba(67,115, 213, .4) 5%, rgba(67,115, 213, .4) 100%);
+    background:linear-gradient(to bottom, rgba(67,115, 213, .4) 5%, rgba(67,115, 213, .4) 100%);
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#599bb3', endColorstr='#408c99',GradientType=0);
+    background-color:rgba(67,115, 213, .4);
+    -moz-border-radius:2px;
+    -webkit-border-radius:2px;
+    border-radius:2px;
+    display:inline-block;
+    cursor:pointer;
+    color:#ffffff;
+    font-size:14px;
+    font-weight:bold;
+    padding:5px;
+    text-decoration:none;
+    text-shadow:0px 1px 0px #3d768a;
+    font-family: "Trebuchet MS","Lucida Grande","Lucida Sans Unicode","Lucida Sans","Tahoma,sans-serif";
+}
+
+.myButton:hover {
+    background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #408c99), color-stop(1, #599bb3));
+    background:-moz-linear-gradient(top, rgba(67,115, 213, .4) 5%, rgba(67,115, 213, .4) 100%);
+    background:-webkit-linear-gradient(top, rgba(67,115, 213, .4) 5%, rgba(67,115, 213, .4) 100%);
+    background:-o-linear-gradient(top, rgba(67,115, 213, .4) 5%, rgba(67,115, 213, .4) 100%);
+    background:-ms-linear-gradient(top, rgba(67,115, 213, .4) 5%, rgba(67,115, 213, .4) 100%);
+    background:linear-gradient(to bottom, rgba(67,115, 213, .4) 5%, rgba(67,115, 213, .4) 100%);
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#408c99', endColorstr='#599bb3',GradientType=0);
+    background-color:#408c99;
+}
+
+.myButton:active {
+    position:relative;
+    top:1px;
+}
+
+
+.myButton1 {
+    -moz-box-shadow: 0px 10px 14px -7px #276873;
+    -webkit-box-shadow: 0px 10px 14px -7px #276873;
+    box-shadow: 0px 10px 14px -7px #276873;
+    background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, rgba(67,115, 213, .4)), color-stop(1, rgba(67,115, 213, .4)));
+    background:-moz-linear-gradient(top, rgba(67,115, 213, .1) 5%, rgba(67,115, 213, .4) 100%);
+    background:-webkit-linear-gradient(top, rgba(67,115, 213, .4) 5%, rgba(67,115, 213, .4) 100%);
+    background:-o-linear-gradient(top, rgba(67,115, 213, .4) 5%, rgba(67,115, 213, .4) 100%);
+    background:-ms-linear-gradient(top, rgba(67,115, 213, .4) 5%, rgba(67,115, 213, .4) 100%);
+    background:linear-gradient(to bottom, rgba(67,115, 213, .4) 5%, rgba(67,115, 213, .4) 100%);
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='rgba(67,115, 213, .4)', endColorstr='rgba(67,115, 213, .4)',GradientType=0);
+    background-color:rgba(67,115, 213, .4);
+    -moz-border-radius:8px;
+    -webkit-border-radius:8px;
+    border-radius:8px;
+    display:inline-block;
+    cursor:pointer;
+    color:#ffffff;
+    font-size:14px;
+    font-weight:bold;
+    padding:5px;
+    text-decoration:none;
+    text-shadow:0px 1px 0px #3d768a;
+    font-family: "Trebuchet MS","Lucida Grande","Lucida Sans Unicode","Lucida Sans","Tahoma,sans-serif";
+}
+
+.myButton1:hover {
+    background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, rgba(200,2,2,0.4)), color-stop(1, rgba(200,2,2,0.4)));
+    background:-moz-linear-gradient(top, rgba(200,2,2,0.2) 5%, rgba(200,2,2,0.4) 100%);
+    background:-webkit-linear-gradient(top, rgba(200,2,2,0.2) 5%, rgba(200,2,2,0.4) 100%);
+    background:-o-linear-gradient(top, rgba(200,2,2,0.1) 5%, rgba(200,2,2,0.4) 100%);
+    background:-ms-linear-gradient(top, rgba(200,2,2,0.2) 5%, rgba(200,2,2,0.4) 100%);
+    background:linear-gradient(to bottom, rgba(200,2,2,0.2) 5%, rgba(200,2,2,0.4) 100%);
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='rgba(200,2,2,0.4)', endColorstr='rgba(200,2,2,0.4)',GradientType=0);
+    background-color:rgba(200,2,2,0.2);
+}
+
+.myButton1:active  {
+    position:relative;
+    top:1px;
+}
+
+/*
+.liens {
+    color:white;
+    text-decoration: none;
+}
+*/
+
+.div_table_style_class tr:hover {
+    /*background:rgba(0,0,0,0.02);*/
+}
+
+#form_infos_malade {
+	/*
+    padding:20px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 35px;
+    border-top-right-radius: 35px;
+    border-bottom-left-radius: 35px;
+    box-shadow: 0px 0px 5px black ; 
+    background:rgba(0,0,0,0.02);
+    width:1000px;
+    font-size:12px;
+    */
+}
+
+#table_fiche_prelevement td
+{
+    text-align: left;
+}
+
+#table_fiche_prelevement td:nth-child(2)
+
+{
+   display:none;
+}
+#table_fiche_prelevement th:nth-child(2){
+   display:none;
+}
+
+.class_table_client td {
+     text-align: center;
+}
+.class_table_client td:nth-child(10) {
+     display:none;
+}
+.class_table_client th:nth-child(10) {
+     display:none;
+}
+
+.dataTables_filter input 
+{ 
+    width : 400px;
+    border: solid 3px  #9FAFD1;
+};
+
+.class_button_clear{
+    padding:1px;
+    border:none;
+    background:rgba(255,255,255,0);
+}
+
+.class_clear_img{
+    width:14px;
+    height:14px;
+    border:none;
+    background:rgba(255,255,255,0);
+}
+
+
+.div_tableau_de_bord{
+	background: rgba(0,0,0,0.1); 
+    color:  rgba(66,81,105,1); 
+    font-weight: bold;
+    border-radius: 0px;  
+    height:50px;
+    padding-top: 7px;
+}
+
+#btn_set_outbreak{
+	padding:15px;
+   	font-weight: bold;
+   	border:solid black 1px;
+   	box-shadow: 0px 0px 5px black ; 
+   	background: rgba(30,144,255,0.2);
+   	border-radius: 120px;
+}
+
+#btn_set_outbreak:hover{
+	color:red; 
+}

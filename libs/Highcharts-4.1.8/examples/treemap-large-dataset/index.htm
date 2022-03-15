@@ -1,0 +1,119 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>Highcharts Example</title>
+
+		<script type="text/javascript"  src="../../../../js/jquery.js" ></script>
+		<style type="text/css">
+#container {
+	min-width: 300px;
+	max-width: 600px;
+	margin: 0 auto;
+}
+		</style>
+		<script type="text/javascript">
+$(function () {
+ $.post('post_get_data.php', function (d) {
+        //console.log(d);
+        d = $.parseJSON(d);
+        var data = {};
+        
+        $.each(d, function(key, value){
+            var v = $.parseJSON(value);
+            data[v.pays] =  {
+                'Nombre de prelevements' : v.nb
+            };
+        });
+        console.log(data);
+        var points = [],
+            region_p,
+            region_val,
+            region_i,
+            country_p,
+            country_i,
+            cause_p,
+            cause_i,
+            cause_name = [],
+            region,
+            country,
+            cause;
+        cause_name['Nombre de prelevements'] = 'Nombre de prelevemnts';
+        
+        region_i = 0;
+
+        for (region in data) {
+            if (data.hasOwnProperty(region)) {
+                region_val = 0;
+                region_p = {
+                    id: "id_" + region_i,
+                    name: region,
+                    color: Highcharts.getOptions().colors[region_i]
+                };
+                country_i = 0;
+                for (country in data[region]) {
+                    if (data[region].hasOwnProperty(country)) {
+                        country_p = {
+                            id: region_p.id + "_" + country_i,
+                            name: country,
+                            parent: region_p.id
+                        };
+                        points.push(country_p);
+                        cause_i = 0;
+                        for (cause in data[region][country]) {
+                            if (data[region][country].hasOwnProperty(cause)) {
+                                cause_p = {
+                                    id: country_p.id + "_" + cause_i,
+                                    name: cause_name[cause],
+                                    parent: country_p.id,
+                                    value: Math.round(+data[region][country][cause])
+                                };
+                                region_val += cause_p.value;
+                                points.push(cause_p);
+                                cause_i = cause_i + 1;
+                            }
+                        }
+                        country_i = country_i + 1;
+                    }
+                }
+                region_p.value = Math.round(region_val / country_i);
+                points.push(region_p);
+                region_i = region_i + 1;
+            }
+        }
+        $('#container').highcharts({
+            series: [{
+                type: "treemap",
+                layoutAlgorithm: 'squarified',
+                allowDrillToNode: true,
+                dataLabels: {
+                    enabled: false
+                },
+                levelIsConstant: false,
+                levels: [{
+                    level: 1,
+                    dataLabels: {
+                        enabled: true
+                    },
+                    borderWidth: 3
+                }],
+                data: points
+            }],
+            subtitle: {
+                text: 'Click points to drill down. Source: <a href="http://apps.who.int/gho/data/node.main.12?lang=en">WHO</a>.'
+            },
+            title: {
+                text: 'Global Mortality Rate 2012, per 100 000 population'
+            }
+        });
+    });
+});
+		</script>
+	</head>
+	<body>
+<script src="../../js/highcharts.js"></script>
+<script src="../../js/modules/heatmap.js"></script>
+<script src="../../js/modules/treemap.js"></script>
+<div id="container"></div>
+	</body>
+</html>
