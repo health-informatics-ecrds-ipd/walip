@@ -1,5 +1,5 @@
 <?php
-$link = mysqli_connect("127.0.*.*", "user**", "pwd***", "db****");
+
 
 # test if the connection was made
 if (!$link){

@@ -1,5 +1,5 @@
 <?php
-$link = mysqli_connect("127.0.*.*", "user**", "pwd***", "db****");
+
 
 ###
 # Data Cleaning - Prevent SQL injections
